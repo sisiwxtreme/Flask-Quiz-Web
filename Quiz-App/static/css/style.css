@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #fdfaf6;
+    background-image: radial-gradient(#efebe4 2px, transparent 2px);
+    background-size: 24px 24px;
+    color: #5c544e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 12px 35px rgba(138, 126, 111, 0.06), 0 4px 12px rgba(138, 126, 111, 0.03);
+    padding: 45px;
+    width: 90%;
+    max-width: 550px;
+    text-align: center;
+    border: 2px solid #f5f2ed;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #403b37;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #5c544e;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #403b37;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #8a8177;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+/* Header for Quiz Page */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px dashed #ece7e1;
+    padding-bottom: 15px;
+}
+
+#question-progress {
+    font-size: 1.15rem;
+    margin: 0;
+    color: #9c9186;
+    font-weight: 700;
+}
+
+#timer {
+    font-size: 1.1rem;
+    font-weight: 800;
+    background: #fcf4f4;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #fae3e3;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.question-container {
+    text-align: left;
+}
+
+#choices-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.choice-btn {
+    background-color: #fdfaf8;
+    border: 2px solid #efede9;
+    border-radius: 16px;
+    padding: 16px 20px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-align: left;
+    color: #635b54;
+    font-weight: 700;
+}
+
+.choice-btn:hover:not(:disabled) {
+    background-color: #f7f4ee;
+    border-color: #e6dfcf;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(138, 126, 111, 0.05);
+}
+
+.choice-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.choice-btn.selected {
+    background-color: #eff3f7;
+    border-color: #c4d6eb;
+    color: #4f6e91;
+}
+
+.choice-btn.correct {
+    background-color: #edf5ed;
+    border-color: #c4e3c4;
+    color: #457a45;
+}
+
+.choice-btn.wrong {
+    background-color: #faeded;
+    border-color: #efcaca;
+    color: #9c5050;
+}
+
+.choice-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+/* Primary Button */
+.btn {
+    background-color: #f5dfcf;
+    color: #8c6345;
+    border: none;
+    border-radius: 16px;
+    padding: 15px 35px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    font-weight: 800;
+    transition: all 0.25s ease;
+    margin-top: 20px;
+    box-shadow: 0 6px 16px rgba(222, 186, 160, 0.35);
+}
+
+.btn:hover {
+    background-color: #edccb4;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(222, 186, 160, 0.45);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(222, 186, 160, 0.35);
+}
+
+.btn.hidden {
+    display: none;
+}
+
+#next-btn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#feedback-message {
+    margin-top: 22px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-align: center;
+    min-height: 25px;
+}
+
+.feedback-correct {
+    color: #5c995c;
+}
+
+.feedback-wrong {
+    color: #c26161;
+}
+
+.feedback-time-up {
+    color: #c2904d;
+}
+
+/* Result Page */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score-container {
+    margin: 35px 0;
+}
+
+.score-circle {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    background: #f2f7ef;
+    border: 8px solid #dce8d3;
+    color: #6a9155;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    box-shadow: 0 12px 28px rgba(206, 222, 195, 0.5);
+}
+
+#score-display {
+    font-size: 3.8rem;
+    font-weight: 800;
+}
+
+.total-text {
+    font-size: 1.5rem;
+    margin-left: 4px;
+    opacity: 0.7;
+    font-weight: 700;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 id="question-progress">Question 1/10</h2>
+            <div id="timer">Time Left: <span id="time-left">15</span>s</div>
+        </div>
+        <div class="question-container">
+            <h3 id="question-text">Loading question...</h3>
+            <div id="choices-container">
+                <!-- Buttons will be injected here via JS -->
+            </div>
+            <div id="feedback-message"></div>
+        </div>
+        <button id="next-btn" class="btn hidden">Next Question</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
